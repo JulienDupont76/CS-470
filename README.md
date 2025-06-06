@@ -146,30 +146,26 @@ conf = dict(
 - **`labels`**
   Categories or topics used for classifying the crawled pages. These should align with your use case or dataset.
 
+- **`image_weight`**
+  A float value between 0 and 1 that controls the influence of image weight in the classification when using CLIP.
+
 ### Running the New Pipeline
 
 Once the configuration is updated:
 
-- The notebook will perform a **web search** for each keyword (no crawling is done).
-- It collects the **top 10 links** from the search results.
-- For each link, the page content is scraped **sequentially**.
-- The notebook applies **chunk tokenization** or **summarization** to handle long text inputs for models like BERT.
-- If using CLIP, it will download and **filter images** based on their relevance to the keyword, reducing noise from irrelevant visuals.
-- Both the **text** and the **relevant images** are embedded and passed to the model for classification.
+- The notebook will perform a web search for each keyword.
+- It collects the top 10 links from the search results.
+- For each link, the page content is scraped sequentially.
+- The notebook applies chunk tokenization or summarization to handle long text inputs for models like BERT.
+- If using CLIP, it will download and filter images based on their relevance to the keyword, reducing noise from irrelevant visuals.
+- Both the text and the relevant images are embedded and passed to the model for classification.
 - The classification results are saved in a JSON file located in the `dir` you specified.
-  In the output, **each link is grouped by its predicted label**, helping the user easily identify the most relevant pages for a given search keyword.
+  In the output, each link is grouped by its predicted label, helping the user easily identify the most relevant pages for a given search keyword.
 
 ```json
 {
-  "technology": [
-    "https://example.com/elon-musk-interview",
-    ...
-  ],
-  "history": [
-    "https://example.com/tour-eiffel-architecture",
-    ...
-  ],
-  ...
+	"technology": ["https://example.com/elon-musk-interview"],
+	"history": ["https://example.com/tour-eiffel-architecture"]
 }
 ```
 
@@ -178,7 +174,11 @@ Once the configuration is updated:
 ## Team
 
 This project was developed by the KAIST CS470 team.
+
 20256086 Julien Dupont
+
 20244673 Aleksandra Pshenova:
+
 20256098 Matthew Heffernan
+
 20220862 Nuradil Zhambyl
