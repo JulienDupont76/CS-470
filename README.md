@@ -112,8 +112,9 @@ After changing the configuration, you can run the notebook. The code will begin 
 - This crawler is **recursive** and **infinite**, it continuously discovers new links and refreshes its crawl daily.
 - The CSV file is **updated in real time**, so you can inspect the results as the crawler runs.
 
-### Evaluating the Results
+### Evaluating the Results of the Base Model
 
+Since the major part of our work consisted of improving the Base Model and we provided evaluation results on this Model, we provide the evaluation code for this Model only. 
 To evaluate the classification performance:
 
 1. Open the `base_model_evaluator` notebook.
@@ -123,6 +124,10 @@ To evaluate the classification performance:
 This will allow you to analyze how well the model is classifying each crawled page.
 
 ## How to Run the New Pipeline Code
+
+![new_pipeline_figure](https://github.com/user-attachments/assets/eae41bef-f1e3-4050-aa17-362dffde9aad)
+
+We provide the code for our proposed New Pipeline described in the poster. This is a prototype build that is runnable, but leaves space for future improvement and further modification. Since we implemented a live Web search module, evaluation of this system involves a curation of a large test set, which is a part of our nearest future works.
 
 Just like the base model, you need to update the configuration before running the notebook:
 
@@ -171,7 +176,7 @@ Once the configuration is updated:
 
 ## Future Improvements
 
-Current system only utilizes pre-trained models, so it is advisable to finetune both CLIP or SBERT on your specific domain or use case. To improve both text embedding and image embedding quality and overcome the limitations of CLIP, it is worth exploring utilization of separate CNN instead of CLIP, however some limitation to watch out for include difficulty of communication between separate models. Some more robust filters for image and text content of scraped pages could improve extraction and classification quality. Since the current system only scrapes the top-N search resutls of the Web search, it is worth experimenting with internal search of each results for the pages that align with the search query for a deeper scraping performance. 
+Current system only utilizes pre-trained models, so it is advisable to finetune both CLIP or SBERT on your specific domain or use case. To overcome the limitations of CLIP and improve both text and image embedding quality, it is worth exploring utilization of separate CNN instead of CLIP, however some limitation to watch out for include difficulty of communication between separate models. Some more robust filters for image and text content of scraped pages could improve extraction and classification quality. Since the current system only scrapes the top-N search resutls of the Web search, it is worth experimenting with internal search of each results for the pages that align with the search query for a deeper scraping performance. 
 
 ## Team
 
