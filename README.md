@@ -125,7 +125,7 @@ This will allow you to analyze how well the model is classifying each crawled pa
 
 ## How to Run the New Pipeline Code
 
-![new_pipeline_figure](https://github.com/user-attachments/assets/eae41bef-f1e3-4050-aa17-362dffde9aad)
+![new_pipeline_graph](https://github.com/user-attachments/assets/fe78d162-5f14-4d33-9011-928a5e2d7707)
 
 We provide the code for our proposed New Pipeline described in the poster. This is a prototype build that is runnable, but leaves space for future improvement and further modification. Since we implemented a live Web search module, evaluation of this system involves a curation of a large test set, which is a part of our nearest future works.
 
