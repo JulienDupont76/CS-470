@@ -171,13 +171,15 @@ Once the configuration is updated:
 
 ## Future Improvements
 
+Current system only utilizes pre-trained models, so it is advisable to finetune both CLIP or SBERT on your specific domain or use case. To improve both text embedding and image embedding quality and overcome the limitations of CLIP, it is worth exploring utilization of separate CNN instead of CLIP, however some limitation to watch out for include difficulty of communication between separate models. Some more robust filters for image and text content of scraped pages could improve extraction and classification quality. Since the current system only scrapes the top-N search resutls of the Web search, it is worth experimenting with internal search of each results for the pages that align with the search query for a deeper scraping performance. 
+
 ## Team
 
-This project was developed by the KAIST CS470 team.
+This project was developed by the KAIST CS470 team #15.
 
 20256086 Julien Dupont
 
-20244673 Aleksandra Pshenova:
+20244673 Aleksandra Pshenova
 
 20256098 Matthew Heffernan
 
